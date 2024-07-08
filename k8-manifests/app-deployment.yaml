@@ -4,6 +4,7 @@ metadata:
   name: applcation-deployment
   labels:
     app: employees
+  namespace: app-namespace
 spec:
   replicas: 3
   selector:
