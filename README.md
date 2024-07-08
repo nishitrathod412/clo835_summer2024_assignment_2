@@ -19,14 +19,14 @@ terraform apply
 - scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-replicaset.yaml 54.162.181.19:/tmp
 - scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-service.yaml 54.162.181.19:/tmp
 
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-deployment.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-pod.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-replicaset.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-service.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-deployment.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-pod.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-replicaset.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-service.yaml 54.162.181.19:/tmp
 
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-deployment.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-pod.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-service.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-deployment.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-pod.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app2-service.yaml 54.162.181.19:/tmp
 
 ## SSH into EC2 Instance
 ssh -i A2_key ec2-user@44.222.226.117
