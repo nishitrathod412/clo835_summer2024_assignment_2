@@ -1,14 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: applcation-deployment
+  name: application-deployment
   labels:
     app: employees
+  namespace: app-namespace
 spec:
   replicas: 3
   selector:
     matchLabels:
-     app: employees
+      app: employees
   template:
     metadata:
       labels:
@@ -16,19 +17,21 @@ spec:
     spec:
       containers:
       - name: application-container
-        image: 937274605158.dkr.ecr.us-east-1.amazonaws.com/application
+        image: 937274605158.dkr.ecr.us-east-1.amazonaws.com/application:latest
         ports:
         - containerPort: 8080
-      env:
-    - name: DBUSER
-      value: "root"
-    - name: DBPWD
-      value: "pw"
-    - name: DBPORT
-      value: "3306"
-    - name: APP_COLOR
-      value: "blue"
-    - name: DATABASE
-      value: "employees"
-  imagePullSecrets:
-  - name: regcred  
+        env:
+        - name: DBHOST
+          value: 10.96.81.176
+        - name: DBUSER
+          value: "root"
+        - name: DBPWD
+          value: "pw"
+        - name: DBPORT
+          value: "3306"
+        - name: APP_COLOR
+          value: "blue"
+        - name: DATABASE
+          value: "employees"
+      imagePullSecrets:
+      - name: regcred

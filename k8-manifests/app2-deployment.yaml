@@ -1,24 +1,23 @@
-
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: application-replicaset
-  namespace: app-namespace
+  name: application-deployment-v2
   labels:
-    app: employees
+    app: employees-v2
+  namespace: app-namespace
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: employees
+      app: employees-v2
   template:
     metadata:
       labels:
-        app: employees
+        app: employees-v2
     spec:
       containers:
-      - name: myapp-container
-        image: 937274605158.dkr.ecr.us-east-1.amazonaws.com/application:latest
+      - name: application-container
+        image: 937274605158.dkr.ecr.us-east-1.amazonaws.com/application:latest-v2
         ports:
         - containerPort: 8080
         env:
@@ -31,7 +30,7 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: APP_COLOR
-          value: "blue"
+          value: "green"
         - name: DATABASE
           value: "employees"
       imagePullSecrets:
