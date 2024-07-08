@@ -13,11 +13,11 @@ terraform plan
 terraform apply
 
 ## Copy Files to EC2 Instance
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key init_kind.sh kind.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-deployment.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-pod.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-replicaset.yaml 54.162.181.19:/tmp
-scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-service.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key init_kind.sh kind.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-deployment.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-pod.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-replicaset.yaml 54.162.181.19:/tmp
+- scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key app-service.yaml 54.162.181.19:/tmp
 
 scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-deployment.yaml 54.162.181.19:/tmp
 scp -i ~/environment/clo835_summer2024_assignment_2/terraform/A2_key mysql-pod.yaml 54.162.181.19:/tmp
