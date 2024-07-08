@@ -2,11 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
+  namespace: mysql-namespace
   labels:
     app: mysql
     component: database
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
