@@ -33,7 +33,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: application
-        IMAGE_TAG: latest
+        IMAGE_TAG: latest-v2
       run: |
         cd app
         
