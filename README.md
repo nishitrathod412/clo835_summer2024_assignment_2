@@ -55,17 +55,17 @@ ssh -i A2_key ec2-user@44.222.226.117
 - kubectl apply -f mysql-service.yaml -n mysql-namespace 
 - kubectl describe pod mysql -n mysql-namespace
 
-kubectl apply -f app-pod.yaml -n app-namespace
-kubectl describe pod app -n app-namespace
-kubectl port-forward pod/application-pod 8080:8080 -n app-namespace
-curl localhost:8080
-kubectl apply -f app-replicaset.yaml -n app-namespace
-kubectl apply -f app-deployment.yaml -n app-namespace
-kubectl apply -f app-service.yaml -n app-namespace
-kubectl logs pod/application-pod -n app-namespace
+- kubectl apply -f app-pod.yaml -n app-namespace
+- kubectl describe pod app -n app-namespace
+- kubectl port-forward pod/application-pod 8080:8080 -n app-namespace
+- curl localhost:8080
+- kubectl apply -f app-replicaset.yaml -n app-namespace
+- kubectl apply -f app-deployment.yaml -n app-namespace
+- kubectl apply -f app-service.yaml -n app-namespace
+- kubectl logs pod/application-pod -n app-namespace
 
-kubectl apply -f app2-pod.yaml -n app-namespace
-kubectl apply -f app2-deployment.yaml -n app-namespace
-kubectl apply -f app2-service.yaml -n app-namespace
+- kubectl apply -f app2-pod.yaml -n app-namespace
+- kubectl apply -f app2-deployment.yaml -n app-namespace
+- kubectl apply -f app2-service.yaml -n app-namespace
 
-kubectl describe replicaset app-replicaset -n app-namespace
+- kubectl describe replicaset app-replicaset -n app-namespace
