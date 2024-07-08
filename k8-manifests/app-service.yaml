@@ -4,11 +4,11 @@ metadata:
   name: application-service
   namespace: app-namespace
   labels:
-  app: employees
+    app: employees
 spec:
   selector:
     app: employees
-  type: NodePort 
+  type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
